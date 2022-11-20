@@ -56,3 +56,13 @@ The returned array should be three elements long and contain: [max, min, avg]</p
 <p>Given any array x, say [1, 5, 10, 7, -2], write a method that shifts each number by one to the front. 
 For example, when the method is done, an x of [1, 5, 10, 7, -2] should become [5, 10, 7, -2, 0]. Notice that the last number is 0. 
 The method does not need to wrap around the values shifted out of bounds.</p>
+
+<hr>
+<h3>FizzBuzz</h3>
+<p>Given an integer n, return a string array answer (1-indexed) where: </p>
+<ul>
+    <li>answer[i] == "FizzBuzz" if i is divisible by 3 and 5.</li>
+    <li>answer[i] == "Fizz" if i is divisible by 3.</li>
+    <li>answer[i] == "Buzz" if i is divisible by 5.</li>
+    <li>answer[i] == i (as a string) if none of the above conditions are true.</li>
+</ul>
