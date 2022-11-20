@@ -1,6 +1,7 @@
 package Fundamentals;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BasicJava {
 
@@ -75,6 +76,17 @@ public class BasicJava {
 
         return resultArr;
     }
+
+    static int greaterThankY(int[] arr, int value) {
+
+        int count =0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] <= value) {
+                count++;
+            }
+        }
+        return count;
+    }
     public static void main(String[] args) {
 //        printOdd1To255();
 //        print1To255();
@@ -92,6 +104,9 @@ public class BasicJava {
         int[] arrayTestCaseFour = {2, 10, 3};
 //        getAverage(arrayTestCaseFour);
 
-        System.out.format("Array with Odd Numbers: %s", arrayOfOddNumbers());
+//        System.out.format("Array with Odd Numbers: %s", arrayOfOddNumbers());
+
+        int[] arrayTestCaseFive = {1, 3, 5, 7};
+        System.out.format("Result of Greater Than Y is %s", greaterThankY(arrayTestCaseFive, 4));
     }
 }
