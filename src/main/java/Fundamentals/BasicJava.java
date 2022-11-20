@@ -3,7 +3,7 @@ package Fundamentals;
 public class BasicJava {
 
     //Method that prints all the odd numbers from 1 to 255.
-    public static void printOddSum() {
+    public static void printOdd1To255() {
         for (int i = 1; i <= 255; i+= 2) {
             System.out.println(i);
         }
@@ -18,7 +18,7 @@ public class BasicJava {
         }
     }
     public static void main(String[] args) {
-        printOddSum();
+        printOdd1To255();
         print1To255();
     }
 }
