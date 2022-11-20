@@ -18,9 +18,16 @@ public class BasicJava {
         }
     }
 
-    
+    static void printSum() {
+        int total = 0;
+        for (int i = 0; i < 256; i++) {
+            total += i;
+            System.out.format("New number: %s Sum: %s\n", i, total);
+        }
+    }
     public static void main(String[] args) {
         printOdd1To255();
         print1To255();
+        printSum();
     }
 }
