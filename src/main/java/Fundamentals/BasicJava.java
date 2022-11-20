@@ -32,12 +32,38 @@ public class BasicJava {
             System.out.println(arr[i]);
         }
     }
-    public static void main(String[] args) {
-        printOdd1To255();
-        print1To255();
-        printSum();
 
+    //Method that takes any array and prints the maximum value in the array
+
+    static double findMax(int[] arr) {
+        if (arr.length == 0) {
+            return 0;
+        }
+        if (arr.length == 1) {
+            return arr[0];
+        }
+
+        int maxNum = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > maxNum) {
+                maxNum = arr[i];
+            }
+        }
+        return maxNum;
+    }
+
+    public static void main(String[] args) {
+//        printOdd1To255();
+//        print1To255();
+//        printSum();
+//
         int[] arrayTestCaseOne = {1, 3, 5, 7, 9, 13};
-        iterateOverArray(arrayTestCaseOne);
+//        iterateOverArray(arrayTestCaseOne);
+
+        int[] arrayTestCaseTwo = {-3, -1, -5, -7};
+        int[] arrayTestCaseThree = {2, 6, 3, -2, -5, 0, 6, -2, 0};
+        System.out.println(findMax(arrayTestCaseOne));
+        System.out.println(findMax(arrayTestCaseTwo));
+        System.out.println(findMax(arrayTestCaseThree));
     }
 }
