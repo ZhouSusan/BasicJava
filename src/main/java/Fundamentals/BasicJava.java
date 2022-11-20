@@ -14,9 +14,11 @@ public class BasicJava {
         int sum = 0;
         for (int i = 0; i <= 255; i++) {
             sum += i;
-            System.out.format("New number: %s Sum: %s\n", i, sum);
+            System.out.println(i);
         }
     }
+
+    
     public static void main(String[] args) {
         printOdd1To255();
         print1To255();
