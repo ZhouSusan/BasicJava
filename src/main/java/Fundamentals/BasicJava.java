@@ -105,6 +105,37 @@ public class BasicJava {
         return list;
     }
 
+    static double[] getMaxMinAvg(int[] arr) {
+        if (arr.length == 0) {
+            double[] res = {0, 0, 0};
+            return res;
+        }
+        if (arr.length == 1) {
+            double[] res = {arr[0], arr[0], 0};
+            return res;
+        }
+        double[] resultArr = new double[3];
+        double sum = arr[0];
+        double min = arr[0];
+        double max = findMax(arr);
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+            sum += arr[i];
+        }
+
+        resultArr[0] = max;
+        resultArr[1] = min;
+        resultArr[2] = sum/ arr.length;
+
+        for (int j = 0; j < resultArr.length; j++) {
+            System.out.println(resultArr[j]);
+        }
+        return resultArr;
+    }
+
     public static void main(String[] args) {
 //        printOdd1To255();
 //        print1To255();
@@ -143,5 +174,8 @@ public class BasicJava {
         arrayListTC2.add(-90);
 
         System.out.format("\nEliminate Negative Numbers: %s", eliminateNegativeNumbers(arrayListTC2));
+
+        int[] arrayTestCaseSix = {1, 5, 10, -2};
+        System.out.format("\n Max, Min and Average - %s", getMaxMinAvg(arrayTestCaseSix));
     }
 }
