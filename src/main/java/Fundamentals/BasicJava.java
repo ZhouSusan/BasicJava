@@ -94,6 +94,17 @@ public class BasicJava {
         }
         return list;
     }
+
+    static ArrayList<Integer> eliminateNegativeNumbers(ArrayList<Integer> list) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) < 0) {
+                list.set(i, 0);
+            }
+        }
+
+        return list;
+    }
+
     public static void main(String[] args) {
 //        printOdd1To255();
 //        print1To255();
@@ -123,5 +134,14 @@ public class BasicJava {
         arrayListTC1.add(-2);
 
         System.out.format("\nSquare the values : %s", squareValues(arrayListTC1));
+
+        ArrayList<Integer> arrayListTC2 = new ArrayList<Integer>();
+        arrayListTC2.add(6);
+        arrayListTC2.add(-4);
+        arrayListTC2.add(-8);
+        arrayListTC2.add(1);
+        arrayListTC2.add(-90);
+
+        System.out.format("\nEliminate Negative Numbers: %s", eliminateNegativeNumbers(arrayListTC2));
     }
 }
