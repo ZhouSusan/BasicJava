@@ -25,9 +25,19 @@ public class BasicJava {
             System.out.format("New number: %s Sum: %s\n", i, total);
         }
     }
+
+    //Method that would iterate through each member of the array
+    static void iterateOverArray(int[] arr) {
+        for(int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
     public static void main(String[] args) {
         printOdd1To255();
         print1To255();
         printSum();
+
+        int[] arrayTestCaseOne = {1, 3, 5, 7, 9, 13};
+        iterateOverArray(arrayTestCaseOne);
     }
 }
