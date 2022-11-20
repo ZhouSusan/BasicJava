@@ -1,5 +1,7 @@
 package Fundamentals;
 
+import java.util.ArrayList;
+
 public class BasicJava {
 
     //Method that prints all the odd numbers from 1 to 255.
@@ -65,21 +67,31 @@ public class BasicJava {
         System.out.format("The average is %s", avg);
     }
 
+    static ArrayList<Integer> arrayOfOddNumbers() {
+        ArrayList<Integer> resultArr = new ArrayList<Integer>();
+        for (int i = 1; i < 256; i++) {
+            resultArr.add(i);
+        }
+
+        return resultArr;
+    }
     public static void main(String[] args) {
 //        printOdd1To255();
 //        print1To255();
 //        printSum();
 //
-//        int[] arrayTestCaseOne = {1, 3, 5, 7, 9, 13};
+        int[] arrayTestCaseOne = {1, 3, 5, 7, 9, 13};
 //        iterateOverArray(arrayTestCaseOne);
 
-//        int[] arrayTestCaseTwo = {-3, -1, -5, -7};
-//        int[] arrayTestCaseThree = {2, 6, 3, -2, -5, 0, 6, -2, 0};
+        int[] arrayTestCaseTwo = {-3, -1, -5, -7};
+        int[] arrayTestCaseThree = {2, 6, 3, -2, -5, 0, 6, -2, 0};
 //        System.out.println(findMax(arrayTestCaseOne));
 //        System.out.println(findMax(arrayTestCaseTwo));
 //        System.out.println(findMax(arrayTestCaseThree));
 
         int[] arrayTestCaseFour = {2, 10, 3};
-        getAverage(arrayTestCaseFour);
+//        getAverage(arrayTestCaseFour);
+
+        System.out.format("Array with Odd Numbers: %s", arrayOfOddNumbers());
     }
 }
