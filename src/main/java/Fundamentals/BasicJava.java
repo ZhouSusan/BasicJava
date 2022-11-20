@@ -87,6 +87,13 @@ public class BasicJava {
         }
         return count;
     }
+
+    static ArrayList<Integer> squareValues(ArrayList<Integer> list) {
+        for(int i = 0; i < list.size(); i++) {
+            list.set(i, list.get(i) * list.get(i));
+        }
+        return list;
+    }
     public static void main(String[] args) {
 //        printOdd1To255();
 //        print1To255();
@@ -108,5 +115,13 @@ public class BasicJava {
 
         int[] arrayTestCaseFive = {1, 3, 5, 7};
         System.out.format("Result of Greater Than Y is %s", greaterThankY(arrayTestCaseFive, 4));
+
+        ArrayList<Integer> arrayListTC1 = new ArrayList<Integer>();
+        arrayListTC1.add(1);
+        arrayListTC1.add(5);
+        arrayListTC1.add(10);
+        arrayListTC1.add(-2);
+
+        System.out.format("\nSquare the values : %s", squareValues(arrayListTC1));
     }
 }
