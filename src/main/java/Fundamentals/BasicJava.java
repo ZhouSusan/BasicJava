@@ -136,6 +136,21 @@ public class BasicJava {
         return resultArr;
     }
 
+    static int[] shiftingValuesInArray(int[] arr) {
+        int j = 1;
+        for (int i = 0; i < arr.length; i++) {
+            if (i == arr.length-1) {
+                arr[arr.length-1] = 0;
+                System.out.println(arr[arr.length-1]);
+            } else {
+                arr[i] = arr[j];
+                j++;
+                System.out.println("\n" + arr[i]);
+            }
+        }
+        return arr;
+    }
+
     public static void main(String[] args) {
 //        printOdd1To255();
 //        print1To255();
@@ -177,5 +192,8 @@ public class BasicJava {
 
         int[] arrayTestCaseSix = {1, 5, 10, -2};
         System.out.format("\n Max, Min and Average - %s", getMaxMinAvg(arrayTestCaseSix));
+
+        int[] arrayTestCaseSeven = {1, 5, 10, 7, -2};
+        System.out.format("\n Shifting the Values in the Array \n%s", shiftingValuesInArray(arrayTestCaseSeven));
     }
 }
