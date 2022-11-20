@@ -15,7 +15,7 @@ public class BasicJava {
     //Method that prints the numbers from 0 to 255
     static void print1To255() {
         int sum = 0;
-        for (int i = 0; i <= 255; i++) {
+        for (int i = 1; i <= 255; i++) {
             sum += i;
             System.out.println(i);
         }
@@ -145,30 +145,30 @@ public class BasicJava {
             } else {
                 arr[i] = arr[j];
                 j++;
-                System.out.println("\n" + arr[i]);
+                System.out.println(arr[i]);
             }
         }
         return arr;
     }
 
     public static void main(String[] args) {
-//        printOdd1To255();
-//        print1To255();
-//        printSum();
-//
+        printOdd1To255();
+        print1To255();
+        printSum();
+
         int[] arrayTestCaseOne = {1, 3, 5, 7, 9, 13};
-//        iterateOverArray(arrayTestCaseOne);
+        iterateOverArray(arrayTestCaseOne);
 
         int[] arrayTestCaseTwo = {-3, -1, -5, -7};
         int[] arrayTestCaseThree = {2, 6, 3, -2, -5, 0, 6, -2, 0};
-//        System.out.println(findMax(arrayTestCaseOne));
-//        System.out.println(findMax(arrayTestCaseTwo));
-//        System.out.println(findMax(arrayTestCaseThree));
+        System.out.println(findMax(arrayTestCaseOne));
+        System.out.println(findMax(arrayTestCaseTwo));
+        System.out.println(findMax(arrayTestCaseThree));
 
         int[] arrayTestCaseFour = {2, 10, 3};
-//        getAverage(arrayTestCaseFour);
+        getAverage(arrayTestCaseFour);
 
-//        System.out.format("Array with Odd Numbers: %s", arrayOfOddNumbers());
+        System.out.format("Array with Odd Numbers: %s", arrayOfOddNumbers());
 
         int[] arrayTestCaseFive = {1, 3, 5, 7};
         System.out.format("Result of Greater Than Y is %s", greaterThankY(arrayTestCaseFive, 4));
@@ -188,10 +188,10 @@ public class BasicJava {
         arrayListTC2.add(1);
         arrayListTC2.add(-90);
 
-        System.out.format("\nEliminate Negative Numbers: %s", eliminateNegativeNumbers(arrayListTC2));
+        System.out.format("\nEliminate Negative Numbers: %s\n", eliminateNegativeNumbers(arrayListTC2));
 
         int[] arrayTestCaseSix = {1, 5, 10, -2};
-        System.out.format("\n Max, Min and Average - %s", getMaxMinAvg(arrayTestCaseSix));
+        System.out.format("\n Max, Min and Average - %s\n", getMaxMinAvg(arrayTestCaseSix));
 
         int[] arrayTestCaseSeven = {1, 5, 10, 7, -2};
         System.out.format("\n Shifting the Values in the Array \n%s", shiftingValuesInArray(arrayTestCaseSeven));
